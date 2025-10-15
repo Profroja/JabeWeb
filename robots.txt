@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://jabeinvestment.co.tz/sitemap.xml
+
+# Disallow admin area
+Disallow: /admin/
+
+# Disallow media files (optional - you can remove this if you want media files indexed)
+Disallow: /media/

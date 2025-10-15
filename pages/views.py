@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
+from django.http import HttpResponse
+from django.utils import timezone
 from products.models import Product, Category, SubCategory, Brand
 from gallery.models import ImageGallery, VideoGallery
 from news.models import News
@@ -135,3 +137,87 @@ def job_vacancies(request):
         'selected_job': selected_job,
     }
     return render(request, 'job-vacancies.html', context)
+
+def sitemap_xml(request):
+    """Generate sitemap.xml for search engines"""
+    current_date = timezone.now().strftime('%Y-%m-%d')
+    
+    sitemap_content = f'''<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://jabeinvestment.co.tz/</loc>
+    <lastmod>{current_date}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- About Us Page -->
+  <url>
+    <loc>https://jabeinvestment.co.tz/about-us/</loc>
+    <lastmod>{current_date}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Products Page -->
+  <url>
+    <loc>https://jabeinvestment.co.tz/products/</loc>
+    <lastmod>{current_date}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- News Page -->
+  <url>
+    <loc>https://jabeinvestment.co.tz/news/</loc>
+    <lastmod>{current_date}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Contact Us Page -->
+  <url>
+    <loc>https://jabeinvestment.co.tz/contact-us/</loc>
+    <lastmod>{current_date}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Company Reports Page -->
+  <url>
+    <loc>https://jabeinvestment.co.tz/company-reports/</loc>
+    <lastmod>{current_date}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Job Vacancies Page -->
+  <url>
+    <loc>https://jabeinvestment.co.tz/job-vacancies/</loc>
+    <lastmod>{current_date}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Image Gallery Page -->
+  
+</urlset>'''
+    
+    return HttpResponse(sitemap_content, content_type='application/xml')
+
+def robots_txt(request):
+    """Generate robots.txt for search engines"""
+    robots_content = '''User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://jabeinvestment.co.tz/sitemap.xml
+
+# Disallow admin area
+Disallow: /admin/
+
+# Disallow media files (optional - you can remove this if you want media files indexed)
+Disallow: /media/'''
+    
+    return HttpResponse(robots_content, content_type='text/plain')

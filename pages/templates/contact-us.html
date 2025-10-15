@@ -47,15 +47,16 @@
   }
 
   .contact-card {
-    background: white;
+    background: #2c2c2c;
     border-radius: 20px;
     padding: 50px 30px;
     text-align: center;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 25px rgba(244, 175, 56, 0.2);
     transition: all 0.3s ease;
-    border: 2px solid #f0f0f0;
+    border: 2px solid #f4af38;
     position: relative;
     overflow: hidden;
+    animation: contactCardPulse 3s infinite;
   }
 
   .contact-card::before {
@@ -105,10 +106,11 @@
   .contact-card h3 {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #333;
+    color: #f4af38;
     margin-bottom: 20px;
     font-family: "montserratB", Arial, sans-serif;
     position: relative;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
 
   .contact-card h3::after {
@@ -130,22 +132,43 @@
 
   .contact-card p {
     font-size: 1rem;
-    color: #666;
+    color: #f4af38;
     line-height: 1.6;
     margin-bottom: 15px;
     font-family: "montserratB", Arial, sans-serif;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   }
 
   .contact-card a {
-    color: #d4af37;
+    color: #f4af38;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   }
 
   .contact-card a:hover {
-    color: #b8941f;
+    color: #f4af38;
     text-decoration: underline;
+  }
+  
+  @keyframes contactCardPulse {
+    0% { 
+      border-color: #f4af38;
+      box-shadow: 0 8px 25px rgba(244, 175, 56, 0.2);
+      transform: scale(1);
+    }
+    50% { 
+      border-color: #f4af38;
+      box-shadow: 0 12px 35px rgba(244, 175, 56, 0.4);
+      transform: scale(1.02);
+    }
+    100% { 
+      border-color: #f4af38;
+      box-shadow: 0 8px 25px rgba(244, 175, 56, 0.2);
+      transform: scale(1);
+    }
   }
   
   /* Contact Section Styling */
@@ -363,11 +386,13 @@
   /* Mobile Responsive */
   @media (max-width: 768px) {
     .main_header {
-      font-size: 2rem;
+      font-size: 3rem;
+      font-weight: 800;
     }
     
     .main_subtitle {
-      font-size: 1.1rem;
+      font-size: 1.4rem;
+      font-weight: 600;
     }
 
     .contact-cards-section {
@@ -394,12 +419,15 @@
     }
 
     .contact-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 15px;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      font-weight: 800;
     }
 
     .contact-card p {
-      font-size: 0.9rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+      line-height: 1.7;
     }
 
     .image-map-section {
@@ -422,11 +450,14 @@
     
     .jabe-image-section h3,
     .map-section h3 {
-      font-size: 1.5rem;
+      font-size: 2.2rem;
+      font-weight: 800;
     }
     
     .jabe-image-section p {
-      font-size: 0.9rem;
+      font-size: 1.4rem;
+      font-weight: 600;
+      line-height: 1.7;
     }
     
     .map-section iframe {
@@ -471,7 +502,8 @@
   
   @media (max-width: 768px) {
     .news-title {
-      font-size: 2.5rem;
+      font-size: 3.5rem;
+      font-weight: 800;
     }
   }
 </style>
@@ -547,7 +579,6 @@
     <div class="image-map-section">
       <div class="image-map-container">
         <div class="jabe-image-section">
-          <h3>About JABE Investment</h3>
           <img src="{% static 'uploadfile/userimg/jabe1.png' %}" alt="Jabe Investment" />
           <p>Your trusted partner for quality machinery parts and exceptional service.</p>
         </div>

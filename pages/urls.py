@@ -11,4 +11,6 @@ urlpatterns = [
     path('image-gallery/', views.image_gallery, name='image-gallery'),
     path('video-gallery/', views.video_gallery, name='video-gallery'),
     path('job-vacancies/', views.job_vacancies, name='job-vacancies'),
+    path('sitemap.xml', views.sitemap_xml, name='sitemap'),
+    path('robots.txt', views.robots_txt, name='robots'),
 ]
