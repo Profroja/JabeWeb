@@ -1,0 +1,1215 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <div class="height"></div>
+  <div id="bootstrap-touch-slider" class="carousel bs-slider fade  control-round indicators-line">
+    <div class="banner_line"></div>
+    <ol class="carousel-indicators">
+      <li class="active" data-target="#bootstrap-touch-slider" data-slide-to="0"></li>
+      <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
+      <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <!-- First Slide -->
+      <div class="item active">
+        <img src="static/uploadfile/bannerimg/16490537950792.jpg"
+            alt="Excavator Spare Parts Manufacturer" />
+
+        <!-- JABE INVESTMENT Text Overlay -->
+        <div class="carousel-text-overlay">
+          <div class="company-name">JABE INVESTMENT</div>
+          <div class="company-tagline">"Quality to trust"</div>
+        </div>
+      </div>
+      
+      <!-- Second Slide -->
+      <div class="item">
+        <img src="static/uploadfile/bannerimg/EXCAVATOR.png"
+            alt="Heavy Duty Machine Spare Parts" />
+
+        <!-- Second Slide Text Overlay - Left Positioned -->
+        <div class="carousel-text-overlay carousel-text-left">
+          <div class="company-name">Your Trusted Partner in</div>
+          <div class="company-tagline">Heavy Duty Machine Spare Parts</div>
+        </div>
+      </div>
+      
+      <!-- Third Slide -->
+      <div class="item">
+        <img src="static/template/images/banner3.jpg"
+            alt="Quality Machinery Solutions" />
+      </div>
+    </div>
+   
+  </div>
+
+  <!-- Logo Belt Section -->
+  <div class="logo-belt-section">
+    <div class="container">
+      <div class="logo-belt-title">
+        <h3>Brands We Deal With</h3>
+      </div>
+      <div class="logo-belt">
+        <div class="logo-track">
+          <div class="logo-item">
+            <img src="static/template/images/slider-logo/KOMATSU.png" alt="Komatsu" />
+          </div>
+          <div class="logo-item">
+            <img src="static/template/images/slider-logo/XCMG.png" alt="XCMG" />
+          </div>
+          <div class="logo-item">
+            <img src="static/template/images/slider-logo/VOLVO.png" alt="Volvo" />
+          </div>
+          <div class="logo-item">
+            <img src="static/template/images/slider-logo/CAT.png" alt="Caterpillar" />
+          </div>
+          <div class="logo-item">
+            <img src="static/template/images/slider-logo/HITACHI.png" alt="Hitachi" />
+          </div>
+          <div class="logo-item">
+            <img src="static/template/images/slider-logo/SANY.png" alt="SANY" />
+          </div>
+          <div class="logo-item">
+            <img src="static/template/images/slider-logo/JBC.png" alt="JCB" />
+          </div>
+          <!-- Duplicate logos for seamless loop -->
+          <div class="logo-item">
+            <img src="static/template/images/slider-logo/KOMATSU.png" alt="Komatsu" />
+          </div>
+          <div class="logo-item">
+            <img src="static/template/images/slider-logo/XCMG.png" alt="XCMG" />
+          </div>
+          <div class="logo-item">
+            <img src="static/template/images/slider-logo/VOLVO.png" alt="Volvo" />
+          </div>
+          <div class="logo-item">
+            <img src="static/template/images/slider-logo/CAT.png" alt="Caterpillar" />
+          </div>
+          <div class="logo-item">
+            <img src="static/template/images/slider-logo/HITACHI.png" alt="Hitachi" />
+          </div>
+          <div class="logo-item">
+            <img src="static/template/images/slider-logo/SANY.png" alt="SANY" />
+          </div>
+          <div class="logo-item">
+            <img src="static/template/images/slider-logo/JBC.png" alt="JCB" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--promo_section-->
+  <style>
+    .promo_combined_section {
+      max-width: 100%;
+      margin: 0;
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    
+    .promo_section_left,
+    .promo_section_right {
+      flex: 1;
+      max-width: 350px;
+      min-width: 250px;
+    }
+    
+    .promo_section_left .banner,
+    .promo_section_right .banner {
+      text-align: center;
+      padding: 20px 25px;
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 8px;
+      margin-bottom: 25px;
+    }
+    
+    .promo_section_left ul,
+    .promo_section_right ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .promo_section_left li,
+    .promo_section_right li {
+      padding: 12px 0;
+      font-size: 20px;
+      color: #333;
+      font-weight: 500;
+    }
+    
+    .checkmark {
+      color: #f4af38;
+      font-weight: bold;
+      font-size: 22px;
+      margin-right: 15px;
+    }
+    
+    @media (max-width: 768px) {
+      .promo_combined_section {
+        flex-direction: column;
+        gap: 30px;
+        max-width: 100%;
+        padding: 0 20px;
+      }
+      
+      .promo_section_left,
+      .promo_section_right {
+        max-width: 100%;
+      }
+      
+      .promo_section_left .banner,
+      .promo_section_right .banner {
+        font-size: 20px;
+        padding: 15px 20px;
+      }
+      
+      .promo_section_left li,
+      .promo_section_right li {
+        font-size: 18px;
+        padding: 10px 0;
+      }
+      
+      .checkmark {
+        font-size: 20px;
+        margin-right: 12px;
+      }
+    }
+  </style>
+  
+  <div class="promo_section">
+    <div class="container" style="max-width: 100%; padding: 0 20px;">
+      <div class="promo_content">
+        <div class="promo_heading">
+          <h2>Boost Your Productivity</h2>
+          <h3>with Genuine, Durable Parts</h3>
+        </div>
+        
+        <div class="promo_sections">
+          <div class="promo_combined_section">
+            <div class="promo_section_left">
+            <div class="banner machine_banner">MACHINE</div>
+            <ul class="machine_list">
+              <li><span class="checkmark">✓</span> Excavators.</li>
+              <li><span class="checkmark">✓</span> Dozers.</li>
+              <li><span class="checkmark">✓</span> Graders</li>
+            </ul>
+          </div>
+          
+            <div class="promo_section_right">
+            <div class="banner parts_banner">SPARE PARTS</div>
+            <ul class="parts_list">
+              <li><span class="checkmark">✓</span> Filters.</li>
+              <li><span class="checkmark">✓</span> Engine Parts.</li>
+              <li><span class="checkmark">✓</span> Hydraulics.</li>
+              <li><span class="checkmark">✓</span> Undercarriage</li>
+            </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="about_section">
+    <div class="container">
+      <style>
+        .about_section {
+          background: white;
+          padding: 60px 0;
+        }
+        
+        .about-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          gap: 60px;
+        }
+        
+        .about-content {
+          flex: 1;
+          padding: 40px;
+        }
+        
+        .about-title {
+          font-size: 3rem;
+          font-weight: 700;
+          color: #8B4513;
+          margin-bottom: 20px;
+          font-family: serif;
+          line-height: 1.2;
+        }
+        
+        .about-description {
+          font-size: 1.1rem;
+          color: #333;
+          line-height: 1.7;
+          margin-bottom: 30px;
+          font-family: sans-serif;
+        }
+        
+        .about-image {
+          flex: 1;
+          text-align: center;
+        }
+        
+        .about-image img {
+          width: 100%;
+          max-width: 500px;
+          height: auto;
+          border-radius: 15px;
+          box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        
+        .read_more_btn {
+          background: #d4af37;
+          color: white;
+          padding: 15px 30px;
+          border: none;
+          border-radius: 5px;
+          font-size: 1rem;
+          font-weight: 600;
+          text-decoration: none;
+          display: inline-block;
+          margin-top: 30px;
+          transition: background 0.3s ease;
+        }
+        
+        .read_more_btn:hover {
+          background: #b8941f;
+          color: white;
+        }
+        
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+          .about-container {
+            flex-direction: column;
+            text-align: center;
+            gap: 30px;
+          }
+          
+          .about-content {
+            padding: 20px;
+            order: 2;
+          }
+          
+          .about-image {
+            order: 1;
+            flex: none;
+          }
+          
+          .about-title {
+            font-size: 2.5rem;
+            text-align: center;
+          }
+          
+          .about-description {
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.6;
+          }
+          
+          .about-image img {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+          }
+          
+          .read_more_btn {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+          }
+  }
+
+  /* Product Belt Styles - Same as Logo Belt */
+  .product_showcase_section {
+    background: white;
+    padding: 10px 0;
+  }
+
+  .product-belt-title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .product-belt-title h3 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+  }
+
+  .product-belt {
+    overflow: hidden;
+    position: relative;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .product-track {
+    display: flex;
+    animation: productBeltMove 30s linear infinite;
+    gap: 30px;
+    padding: 20px 0;
+    width: max-content;
+  }
+
+  .product-item {
+    flex-shrink: 0;
+    width: 500px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .product-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+  }
+
+  @keyframes productBeltMove {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .product_showcase_section {
+      padding: 40px 0;
+    }
+
+    .product-item {
+      width: 280px;
+      height: 300px;
+    }
+
+    .product-track {
+      gap: 20px;
+    }
+  }
+</style>
+      
+      <div class="about-container">
+        <div class="about-content">
+          <h2 class="about-title">Welcome to Jabe Investment</h2>
+          <p class="about-description">
+            <strong>JABE INVESTMENT</strong> is a trusted leader in the supply of heavy-duty and 
+            automotive machinery spare parts. With over 15 years of experience, we have 
+            established ourselves as a reliable partner for industries that depend on machinery, 
+            ranging from construction and mining to agriculture.
+          </p>
+          <p class="about-description">
+            Our commitment to quality and service excellence has made us a preferred choice 
+            for businesses seeking reliable machinery solutions and spare parts.
+          </p>
+        </div>
+        
+        <div class="about-image">
+          <img src="static/uploadfile/userimg/jabe1.png" alt="JABE Investment" />
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Services Section -->
+  <div class="services_section">
+      <div class="container">
+      <style>
+        .services_section {
+          background: #f8f9fa;
+          padding: 80px 0;
+        }
+        
+        .services-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 30px;
+          padding: 0 20px;
+        }
+        
+        .service-card {
+          background: white;
+          padding: 25px 20px;
+          border-radius: 15px;
+          text-align: center;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .service-icon {
+          width: 80px;
+          height: 80px;
+          background: #f4af38;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto 25px;
+          font-size: 35px;
+          color: white;
+        }
+        
+        .service-title {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: #333;
+          margin-bottom: 20px;
+          font-family: 'Montserrat', sans-serif;
+        }
+        
+        .service-description {
+          font-size: 1rem;
+          color: #666;
+          line-height: 1.6;
+          font-family: sans-serif;
+        }
+        
+        /* Tablet Responsive */
+        @media (max-width: 1024px) and (min-width: 769px) {
+          .services-container {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+          }
+          
+          .service-card {
+            padding: 20px 15px;
+          }
+          
+          .service-icon {
+            width: 70px;
+            height: 70px;
+            font-size: 30px;
+            margin-bottom: 15px;
+          }
+          
+          .service-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+          }
+          
+          .service-description {
+            font-size: 0.9rem;
+            line-height: 1.5;
+          }
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+          .services_section {
+            padding: 60px 0;
+          }
+          
+          .services-container {
+            grid-template-columns: 1fr;
+            gap: 25px;
+            padding: 0 15px;
+          }
+          
+          .service-card {
+            padding: 25px 20px;
+          }
+          
+          .service-icon {
+            width: 70px;
+            height: 70px;
+            font-size: 30px;
+            margin-bottom: 20px;
+          }
+          
+          .service-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+          }
+          
+          .service-description {
+            font-size: 0.95rem;
+            line-height: 1.5;
+          }
+        }
+      </style>
+      
+      <div class="services-container">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa fa-truck" style="font-size: 35px;"></i>
+          </div>
+          <h3 class="service-title">Heavy Equipments</h3>
+          <p class="service-description">
+            Access a wide range of heavy earth moving machinery – excavators, bulldozers, wheel loaders, dump trucks, graders, and more – ready to tackle the toughest jobs. We source from top-tier manufacturers to ensure every machine delivers durable, reliable performance.
+          </p>
+      </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa fa-cogs" style="font-size: 35px;"></i>
+    </div>
+          <h3 class="service-title">Genuine Spare Parts & Lubricants</h3>
+          <p class="service-description">
+            Keep your fleet running at peak efficiency with our extensive selection of high quality spare parts and specialized lubricants. Using authentic parts guarantees a perfect fit and consistent performance, preventing the risks that come with unreliable knock-offs.
+          </p>
+          </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fa fa-wrench" style="font-size: 35px;"></i>
+          </div>
+          <h3 class="service-title">Technical Services & Support</h3>
+          <p class="service-description">
+            Minimize downtime and maximize productivity with our expert maintenance and repair services. Our team of skilled technicians is on call to provide preventative maintenance, diagnostics, and on-site repairs – so you can avoid small issues becoming big problems.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why Us Section -->
+  <div class="why_us_section">
+    <div class="container">
+      <style>
+        .why_us_section {
+          background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 50%, #3d3d3d 100%);
+          padding: 100px 0;
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .why_us_section::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23f4af38" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23f4af38" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23f4af38" opacity="0.05"/><circle cx="10" cy="60" r="0.5" fill="%23f4af38" opacity="0.05"/><circle cx="90" cy="40" r="0.5" fill="%23f4af38" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+          opacity: 0.3;
+        }
+        
+        .why_us_container {
+          max-width: 1200px;
+          margin: 0 auto;
+          position: relative;
+          z-index: 2;
+        }
+        
+        .why_us_header {
+          text-align: center;
+          margin-bottom: 80px;
+        }
+        
+        .why_us_title {
+          font-size: 3.5rem;
+          font-weight: 800;
+          color: #f4af38;
+          margin-bottom: 20px;
+          text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+          font-family: 'Montserrat', sans-serif;
+          position: relative;
+        }
+        
+        .why_us_title::after {
+          content: '';
+          position: absolute;
+          bottom: -15px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100px;
+          height: 4px;
+          background: linear-gradient(90deg, transparent, #f4af38, transparent);
+          border-radius: 2px;
+        }
+        
+        .why_us_subtitle {
+          font-size: 1.3rem;
+          color: #ccc;
+          font-weight: 300;
+          letter-spacing: 1px;
+        }
+        
+        .why_us_grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 30px;
+          margin-top: 60px;
+        }
+        
+        .why_us_card {
+          background: rgba(255, 255, 255, 0.05);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(244, 175, 56, 0.2);
+          border-radius: 20px;
+          padding: 40px 30px;
+          text-align: center;
+          position: relative;
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          overflow: hidden;
+        }
+        
+        .why_us_card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(244, 175, 56, 0.1), transparent);
+          transition: left 0.6s ease;
+        }
+        
+        .why_us_card:hover::before {
+          left: 100%;
+        }
+        
+        .why_us_card:hover {
+          transform: translateY(-15px) scale(1.02);
+          border-color: #f4af38;
+          box-shadow: 0 25px 50px rgba(244, 175, 56, 0.2);
+        }
+        
+        .why_us_icon {
+          width: 100px;
+          height: 100px;
+          background: linear-gradient(135deg, #f4af38, #d4af37);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto 30px;
+          position: relative;
+          box-shadow: 0 10px 30px rgba(244, 175, 56, 0.3);
+        }
+        
+        .why_us_icon::after {
+          content: '';
+          position: absolute;
+          top: -5px;
+          left: -5px;
+          right: -5px;
+          bottom: -5px;
+          border: 2px solid rgba(244, 175, 56, 0.3);
+          border-radius: 50%;
+          animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+          0% { transform: scale(1); opacity: 1; }
+          100% { transform: scale(1.2); opacity: 0; }
+        }
+        
+        .why_us_icon i {
+          font-size: 45px;
+          color: white;
+          text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .why_us_card_title {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: #f4af38;
+          margin-bottom: 20px;
+          font-family: 'Montserrat', sans-serif;
+        }
+        
+        .why_us_card_description {
+          font-size: 1.1rem;
+          color: #e0e0e0;
+          line-height: 1.6;
+          font-weight: 300;
+        }
+        
+        /* Tablet Responsive */
+        @media (max-width: 1024px) and (min-width: 769px) {
+          .why_us_grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+          }
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+          .why_us_section {
+            padding: 60px 0;
+          }
+          
+          .why_us_title {
+            font-size: 2.5rem;
+          }
+          
+          .why_us_subtitle {
+            font-size: 1.1rem;
+          }
+          
+          .why_us_grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 40px;
+          }
+          
+          .why_us_card {
+            padding: 30px 20px;
+          }
+          
+          .why_us_icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+          }
+          
+          .why_us_icon i {
+            font-size: 35px;
+          }
+          
+          .why_us_card_title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+          }
+          
+          .why_us_card_description {
+            font-size: 1rem;
+          }
+        }
+      </style>
+      
+      <div class="why_us_container">
+        <div class="why_us_header">
+          <h2 class="why_us_title">Why Choose Us?</h2>
+        </div>
+        
+        <div class="why_us_grid">
+          <div class="why_us_card">
+            <div class="why_us_icon">
+              <i class="fa fa-shield"></i>
+            </div>
+            <h3 class="why_us_card_title">Quality Guaranteed</h3>
+            <p class="why_us_card_description">
+              All our spare parts are strong, genuine, and long-lasting
+            </p>
+          </div>
+          
+          <div class="why_us_card">
+            <div class="why_us_icon">
+              <i class="fa fa-warehouse" style="font-size: 45px;"></i>
+            </div>
+            <h3 class="why_us_card_title">Wide Range in Stock</h3>
+            <p class="why_us_card_description">
+              We always have parts ready for excavators, dozers, and graders.
+            </p>
+          </div>
+          
+          <div class="why_us_card">
+            <div class="why_us_icon">
+              <i class="fa fa-dollar-sign" style="font-size: 45px;"></i>
+            </div>
+            <h3 class="why_us_card_title">Competitive Prices</h3>
+            <p class="why_us_card_description">
+              Best prices with no compromise on quality.
+            </p>
+          </div>
+          
+           <div class="why_us_card">
+            <div class="why_us_icon">
+              <i class="fa-solid fa-tools" style="font-size: 45px;"></i>
+            </div>
+            <h3 class="why_us_card_title">Reliable Support</h3>
+            <p class="why_us_card_description">
+              We provide reliable support for your heavy equipment.
+            </p>
+          </div>
+       
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Image Gallery Section -->
+  <div class="image_gallery_section">
+    <div class="container">
+      <style>
+        .image_gallery_section {
+          background: white;
+          padding: 80px 0;
+        }
+        
+        .gallery_title {
+          text-align: center;
+          margin-bottom: 60px;
+        }
+        
+        .gallery_title h3 {
+          font-size: 2.5rem;
+          font-weight: 700;
+          color: #333;
+          margin-bottom: 15px;
+          font-family: 'Montserrat', sans-serif;
+        }
+        
+        .gallery_title p {
+          font-size: 1.2rem;
+          color: #666;
+          font-weight: 300;
+        }
+        
+        .gallery_grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 30px;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        
+        .gallery_item {
+          position: relative;
+          border-radius: 15px;
+          overflow: hidden;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .gallery_item:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .gallery_item img {
+          width: 360px;
+          height: 473px;
+          object-fit: cover;
+          border-radius: 15px;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+          .image_gallery_section {
+            padding: 60px 0;
+          }
+          
+          .gallery_grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 0 20px;
+          }
+          
+          .gallery_item img {
+            width: 280px;
+            height: 368px;
+          }
+          
+          .gallery_title h3 {
+            font-size: 2rem;
+          }
+          
+          .gallery_title p {
+            font-size: 1rem;
+          }
+        }
+      </style>
+      
+      <div class="gallery_title">
+        <p>Heavy machinery, expert maintenance, and quality parts</p>
+      </div>
+      
+      <div class="gallery_grid">
+        <div class="gallery_item">
+          <img src="{% static 'template/images/1.jpeg' %}" alt="Heavy Equipment" />
+        </div>
+        <div class="gallery_item">
+          <img src="{% static 'template/images/2.jpg' %}" alt="Expert Maintenance" />
+        </div>
+        <div class="gallery_item">
+          <img src="{% static 'template/images/3.jpg' %}" alt="Quality Parts" />
+        </div>
+        <div class="gallery_item">
+          <img src="{% static 'template/images/4.png' %}" alt="Industrial Solutions" />
+        </div>
+        <div class="gallery_item">
+          <img src="{% static 'template/images/5.png' %}" alt="Professional Service" />
+        </div>
+        <div class="gallery_item">
+          <img src="{% static 'template/images/6.png' %}" alt="Reliable Support" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- News and Updates Section -->
+  <div class="news_updates_section">
+    <div class="container">
+      <style>
+        .news_updates_section {
+          background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+          padding: 100px 0;
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .news_updates_section::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="newsPattern" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23f4af38" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23f4af38" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23newsPattern)"/></svg>');
+          opacity: 0.3;
+        }
+        
+        .news_container {
+          max-width: 1200px;
+          margin: 0 auto;
+          position: relative;
+          z-index: 2;
+        }
+        
+        .news_header {
+          text-align: center;
+          margin-bottom: 80px;
+        }
+        
+        .news_title {
+          font-size: 3.5rem;
+          font-weight: 800;
+          color: #2c3e50;
+          margin-bottom: 20px;
+          font-family: 'Montserrat', sans-serif;
+          position: relative;
+        }
+        
+        .news_title::after {
+          content: '';
+          position: absolute;
+          bottom: -15px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 120px;
+          height: 4px;
+          background: linear-gradient(90deg, transparent, #f4af38, transparent);
+          border-radius: 2px;
+        }
+        
+        .news_subtitle {
+          font-size: 1.3rem;
+          color: #666;
+          font-weight: 300;
+          letter-spacing: 1px;
+        }
+        
+        .news_grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 40px;
+          margin-top: 60px;
+        }
+        
+        .news_card {
+          background: white;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          position: relative;
+        }
+        
+        .news_card:hover {
+          transform: translateY(-15px) scale(1.02);
+          box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+        
+        .news_image_container {
+          position: relative;
+          height: 250px;
+          overflow: hidden;
+        }
+        
+        .news_image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+        
+        .news_card:hover .news_image {
+          transform: scale(1.1);
+        }
+        
+        .news_date_overlay {
+          position: absolute;
+          bottom: 15px;
+          left: 15px;
+          background: #f4af38;
+          color: white;
+          padding: 8px 12px;
+          border-radius: 8px;
+          font-weight: 600;
+          font-size: 0.9rem;
+          box-shadow: 0 4px 15px rgba(244, 175, 56, 0.3);
+        }
+        
+        .news_content {
+          padding: 30px 25px;
+        }
+        
+        .news_card_title {
+          font-size: 1.4rem;
+          font-weight: 700;
+          color: #2c3e50;
+          margin-bottom: 15px;
+          line-height: 1.3;
+          font-family: 'Montserrat', sans-serif;
+        }
+        
+        .news_card_excerpt {
+          font-size: 1rem;
+          color: #666;
+          line-height: 1.6;
+          margin-bottom: 20px;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        
+        .news_read_more {
+          color: #f4af38;
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 0.95rem;
+          transition: color 0.3s ease;
+          display: inline-flex;
+          align-items: center;
+          gap: 5px;
+        }
+        
+        .news_read_more:hover {
+          color: #d4af37;
+        }
+        
+        .news_read_more::after {
+          content: '→';
+          transition: transform 0.3s ease;
+        }
+        
+        .news_read_more:hover::after {
+          transform: translateX(3px);
+        }
+        
+        /* Tablet Responsive */
+        @media (max-width: 1024px) and (min-width: 769px) {
+          .news_grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+          }
+          
+          .news_title {
+            font-size: 3rem;
+          }
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+          .news_updates_section {
+            padding: 60px 0;
+          }
+          
+          .news_title {
+            font-size: 2.5rem;
+          }
+          
+          .news_subtitle {
+            font-size: 1.1rem;
+          }
+          
+          .news_grid {
+            grid-template-columns: 1fr;
+            gap: 25px;
+            margin-top: 40px;
+          }
+          
+          .news_image_container {
+            height: 200px;
+          }
+          
+          .news_content {
+            padding: 25px 20px;
+          }
+          
+          .news_card_title {
+            font-size: 1.2rem;
+          }
+        }
+      </style>
+      
+      <div class="news_container">
+        <div class="news_header">
+          <h2 class="news_title">News & Updates</h2>
+          <p class="news_subtitle">Stay informed with our latest news and industry insights</p>
+        </div>
+        
+        {% if latest_news %}
+        <div class="news_grid">
+          {% for news in latest_news %}
+          <div class="news_card">
+            <div class="news_image_container">
+              {% if news.header_image %}
+                <img src="{{ news.header_image.url }}" alt="{{ news.title }}" class="news_image" />
+              {% else %}
+                <img src="{% static 'template/images/default-news.jpg' %}" alt="{{ news.title }}" class="news_image" />
+              {% endif %}
+              <div class="news_date_overlay">
+                {% if news.publication_date %}
+                  {{ news.publication_date|date:"M d" }}
+                {% else %}
+                  {{ news.created_at|date:"M d" }}
+                {% endif %}
+              </div>
+            </div>
+            <div class="news_content">
+              <h3 class="news_card_title">{{ news.title|default:"Latest News" }}</h3>
+              <p class="news_card_excerpt">
+                {{ news.description|truncatewords:25|default:"Stay tuned for more updates from JABE Investment." }}
+              </p>
+              <a href="{% url 'news' %}?news_id={{ news.id }}" class="news_read_more">Read More</a>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        {% else %}
+        <div class="no_news_message" style="text-align: center; padding: 60px 20px; color: #666;">
+          <div style="font-size: 48px; margin-bottom: 20px; color: #ddd;">
+            <i class="fa fa-newspaper-o"></i>
+          </div>
+          <h3 style="color: #333; margin-bottom: 15px; font-size: 24px;">No News Available</h3>
+          <p style="font-size: 16px; line-height: 1.6; max-width: 400px; margin: 0 auto;">
+            There are currently no news articles available. Please check back later for updates.
+          </p>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

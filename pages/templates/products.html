@@ -1,0 +1,586 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+  .products-page {
+    background-color: white;
+    min-height: 100vh;
+    padding: 20px 0;
+  }
+  
+  .products-header {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 3px solid #d4af37;
+  }
+  
+  .products-title {
+    color: #333;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .products-subtitle {
+    color: #666;
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  .products-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
+  
+  .product-category {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    gap: 60px;
+  }
+  
+  .product-category:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  
+  .product-image {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .product-image img {
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .product-image img:hover {
+    transform: scale(1.05);
+  }
+  
+  .product-content {
+    flex: 1;
+    padding: 40px;
+  }
+  
+  .product-title {
+    color: #333;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+  
+  .product-description {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+  
+  .product-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .product-features li {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+  }
+  
+  .product-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .products-header {
+      padding: 40px 0;
+    }
+    
+    .products-title {
+      font-size: 32px;
+    }
+    
+    .products-subtitle {
+      font-size: 16px;
+    }
+    
+    .products-container {
+      padding: 40px 15px;
+    }
+    
+    .product-category {
+      flex-direction: column !important;
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+    
+    .product-content {
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .product-title {
+      font-size: 28px;
+    }
+    
+    .product-description {
+      font-size: 16px;
+    }
+    
+    .product-image img {
+      height: 250px;
+    }
+  }
+</style>
+
+<div class="height"></div>
+
+<div class="products-header">
+  <div class="container">
+    <h1 class="products-title">Our Products & Services</h1>
+  </div>
+</div>
+
+<div class="products-page">
+  <div class="products-container">
+    
+    <!-- 1. Construction and Mining Machinery -->
+    <div class="product-category">
+      <div class="product-image">
+        <img src="{% static 'uploadfile/products/p1.jpg' %}" alt="Construction and Mining Machinery" />
+      </div>
+      <div class="product-content">
+        <h2 class="product-title">Construction and Mining Machinery</h2>
+        <p class="product-description">
+          Heavy-duty excavators, bulldozers, wheel loaders, dump trucks, and graders designed to tackle the toughest construction and mining operations. Our machinery delivers superior performance, durability, and efficiency in the most demanding environments.
+        </p>
+        <ul class="product-features">
+          <li>Excavators for earthmoving and excavation</li>
+          <li>Bulldozers for land clearing and grading</li>
+          <li>Wheel loaders for material handling</li>
+          <li>Dump trucks for heavy hauling</li>
+          <li>Graders for road construction</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 2. Ground-Engaging Tools -->
+    <div class="product-category">
+      <div class="product-image">
+        <img src="{% static 'uploadfile/products/p2.png' %}" alt="Ground-Engaging Tools" />
+      </div>
+      <div class="product-content">
+        <h2 class="product-title">Ground-Engaging Tools</h2>
+        <p class="product-description">
+          High-quality bucket teeth, cutting edges, and ground-engaging tools that maximize productivity and minimize wear. Our tools are engineered for maximum penetration and durability in the most challenging ground conditions.
+        </p>
+        <ul class="product-features">
+          <li>Bucket teeth and adapters</li>
+          <li>Cutting edges and wear plates</li>
+          <li>Ripper teeth and shanks</li>
+          <li>Blade and moldboard parts</li>
+          <li>Specialized ground-engaging components</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 3. POWER TRAIN & UNDERCARRIAGE PARTS -->
+    <div class="product-category">
+      <div class="product-image">
+        <img src="{% static 'uploadfile/products/p3.jpg' %}" alt="Power Train & Undercarriage Parts" />
+      </div>
+      <div class="product-content">
+        <h2 class="product-title">Power Train & Undercarriage Parts</h2>
+        <p class="product-description">
+          Essential components for power transmission and machine mobility. Our undercarriage parts ensure smooth operation and extended machine life through superior engineering and quality materials.
+        </p>
+        <ul class="product-features">
+          <li>Track chains and links</li>
+          <li>Rollers and idlers</li>
+          <li>Sprockets and drive motors</li>
+          <li>Transmission components</li>
+          <li>Final drive assemblies</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 4. ADVANCED FILTERS -->
+    <div class="product-category">
+      <div class="product-image">
+        <img src="{% static 'uploadfile/products/p4.jpeg' %}" alt="Advanced Filters" />
+      </div>
+      <div class="product-content">
+        <h2 class="product-title">Advanced Filters</h2>
+        <p class="product-description">
+          Clean filtration means longer machine life. We provide oil filters, fuel filters, air filters, hydraulic filters, and water separators designed to trap contaminants and ensure smooth, efficient equipment operation.
+        </p>
+        <ul class="product-features">
+          <li>Oil and fuel filters</li>
+          <li>Air intake filters</li>
+          <li>Hydraulic system filters</li>
+          <li>Water separators</li>
+          <li>Specialized filtration systems</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 5. Specialized Lubricants -->
+    <div class="product-category">
+      <div class="product-image">
+        <img src="{% static 'uploadfile/products/p5.png' %}" alt="Specialized Lubricants" />
+      </div>
+      <div class="product-content">
+        <h2 class="product-title">Specialized Lubricants</h2>
+        <p class="product-description">
+          Premium lubricants and greases specifically formulated for heavy machinery. Our specialized lubricants provide superior protection, reduce wear, and extend component life in extreme operating conditions.
+        </p>
+        <ul class="product-features">
+          <li>Heavy-duty engine oils</li>
+          <li>Hydraulic system fluids</li>
+          <li>Gear and transmission oils</li>
+          <li>High-temperature greases</li>
+          <li>Specialized industrial lubricants</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 6. Electrical System Parts -->
+    <div class="product-category">
+      <div class="product-image">
+        <img src="{% static 'uploadfile/products/p6.png' %}" alt="Electrical System Parts" />
+      </div>
+      <div class="product-content">
+        <h2 class="product-title">Electrical System Parts</h2>
+        <p class="product-description">
+          Reliable electrical components and systems for heavy machinery. From alternators and starters to sensors and control modules, we provide the electrical parts needed to keep your equipment running smoothly.
+        </p>
+        <ul class="product-features">
+          <li>Alternators and starters</li>
+          <li>Batteries and charging systems</li>
+          <li>Sensors and switches</li>
+          <li>Control modules and ECUs</li>
+          <li>Wiring harnesses and connectors</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 7. Hydraulic Pumps -->
+    <div class="product-category">
+      <div class="product-image">
+        <img src="{% static 'uploadfile/products/p7.jpg' %}" alt="Hydraulic Pumps" />
+      </div>
+      <div class="product-content">
+        <h2 class="product-title">Hydraulic Pumps</h2>
+        <p class="product-description">
+          High-performance hydraulic pumps and motors for powering heavy machinery systems. Our hydraulic components deliver consistent power and reliability for demanding applications.
+        </p>
+        <ul class="product-features">
+          <li>Gear pumps and motors</li>
+          <li>Piston pumps and motors</li>
+          <li>Vane pumps and motors</li>
+          <li>Hydraulic cylinders</li>
+          <li>Control valves and manifolds</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 8. Pin & Bush -->
+    <div class="product-category">
+      <div class="product-image">
+        <img src="{% static 'uploadfile/products/p8.avif' %}" alt="Pin & Bush" />
+      </div>
+      <div class="product-content">
+        <h2 class="product-title">Pin & Bush</h2>
+        <p class="product-description">
+          Precision-engineered pins and bushings for pivot points and joints in heavy machinery. Our components provide smooth operation and extended service life in high-stress applications.
+        </p>
+        <ul class="product-features">
+          <li>Bucket pins and bushings</li>
+          <li>Boom and stick pins</li>
+          <li>Track link pins and bushings</li>
+          <li>Joint pins and sleeves</li>
+          <li>Specialized pivot components</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 9. Braking System Parts -->
+    <div class="product-category">
+      <div class="product-image">
+        <img src="{% static 'uploadfile/products/p9.png' %}" alt="Braking System Parts" />
+      </div>
+      <div class="product-content">
+        <h2 class="product-title">Braking System Parts</h2>
+        <p class="product-description">
+          Critical safety components for heavy machinery braking systems. Our brake parts ensure reliable stopping power and safety in all operating conditions.
+        </p>
+        <ul class="product-features">
+          <li>Brake pads and shoes</li>
+          <li>Brake discs and drums</li>
+          <li>Brake cylinders and calipers</li>
+          <li>Brake lines and hoses</li>
+          <li>Brake system components</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 10. Cooling System Parts -->
+    <div class="product-category">
+      <div class="product-image">
+        <img src="{% static 'uploadfile/products/p10.png' %}" alt="Cooling System Parts" />
+      </div>
+      <div class="product-content">
+        <h2 class="product-title">Cooling System Parts</h2>
+        <p class="product-description">
+          Essential cooling system components to maintain optimal operating temperatures. Our cooling parts help prevent overheating and ensure reliable machine performance.
+        </p>
+        <ul class="product-features">
+          <li>Radiators and coolers</li>
+          <li>Water pumps and thermostats</li>
+          <li>Cooling fans and motors</li>
+          <li>Hoses and connections</li>
+          <li>Temperature control components</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- 11. Engine Components -->
+    <div class="product-category">
+      <div class="product-image">
+        <img src="{% static 'uploadfile/products/p11.png' %}" alt="Engine Components" />
+      </div>
+      <div class="product-content">
+        <h2 class="product-title">Engine Components</h2>
+        <p class="product-description">
+          High-quality engine parts and components for heavy machinery engines. Our engine components ensure reliable power delivery and extended engine life.
+        </p>
+        <ul class="product-features">
+          <li>Pistons and rings</li>
+          <li>Connecting rods and bearings</li>
+          <li>Cylinder heads and gaskets</li>
+          <li>Valves and valve train</li>
+          <li>Engine sensors and controls</li>
+        </ul>
+      </div>
+    </div>
+    
+  
+    
+    <!-- 13. Bearing -->
+    <div class="product-category">
+      <div class="product-image">
+        <img src="{% static 'uploadfile/products/p12.png' %}" alt="Bearings" />
+      </div>
+      <div class="product-content">
+        <h2 class="product-title">Bearings</h2>
+        <p class="product-description">
+          High-performance bearings for heavy machinery applications. Our bearings provide smooth operation and extended service life in demanding conditions.
+        </p>
+        <ul class="product-features">
+          <li>Ball bearings</li>
+          <li>Roller bearings</li>
+          <li>Thrust bearings</li>
+          <li>Needle bearings</li>
+          <li>Specialized bearing assemblies</li>
+        </ul>
+      </div>
+    </div>
+    
+    
+    
+  </div>
+
+<!-- Background Image Section -->
+<div class="background-image-section">
+  <img src="{% static 'uploadfile/products/maintainance1.jpg' %}" alt="Construction Site Background" />
+</div>
+
+<!-- Comprehensive Services Section -->
+<div class="comprehensive-services-section">
+  <div class="services-container">
+    <div class="services-card">
+      <div class="services-person">
+        <img src="{% static 'uploadfile/products/p122.webp' %}" alt="Technician Working" />
+      </div>
+      <div class="services-content-box">
+        <h2 class="services-title">At JABE Investment, quality is not just a promise - it's our guarantee.</h2>
+        <p class="services-description">
+          Every product we supply, from a simple filter to equipment, meets the highest standards of excellence. 
+          By insisting on high quality parts and proven equipment, we help extend the life of your machinery 
+          and ensure optimal performance in the toughest conditions.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<style>
+  .background-image-section {
+    background: white;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .background-image-section img {
+    max-width: 1200px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .comprehensive-services-section {
+    background: white;
+    padding: 60px 0;
+  }
+  
+  .services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .services-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .services-person {
+    flex: 0 0 50%;
+    position: relative;
+  }
+  
+  .services-person img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .services-content-box {
+    flex: 0 0 50%;
+    padding: 40px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .services-title {
+    color: #333;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+  
+  .services-description {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .services-read-more-btn {
+    background: #f4af38;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+    transition: background 0.3s ease;
+  }
+  
+  .services-read-more-btn:hover {
+    background: #d4af37;
+    color: white;
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .background-image-section {
+      padding: 40px 0;
+    }
+    
+    .background-image-section img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+    
+    .comprehensive-services-section {
+      padding: 40px 0;
+    }
+    
+    .services-container {
+      padding: 0 15px;
+    }
+    
+    .services-card {
+      flex-direction: column;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    
+    .services-person {
+      flex: none;
+      width: 100%;
+      max-width: 100%;
+    }
+    
+    .services-person img {
+      height: 250px;
+      width: 100%;
+      max-width: 100%;
+    }
+    
+    .services-content-box {
+      width: 100%;
+      max-width: 100%;
+      padding: 30px 20px;
+    }
+    
+    .services-title {
+      font-size: 24px;
+    }
+    
+    .services-description {
+      font-size: 15px;
+    }
+  }
+</style>
+
+{% endblock %}

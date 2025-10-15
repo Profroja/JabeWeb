@@ -1,0 +1,882 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    .news-header {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        padding: 30px 0;
+        border-bottom: 3px solid #d4af37;
+      }
+      
+      .news-header-content {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .news-title {
+        color: #333;
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+</style>
+
+<div class="height"></div>
+
+<div class="news-header">
+  <div class="container">
+    <div class="news-header-content">
+      <h1 class="news-title">About Us</h1>
+    </div>
+  </div>
+</div>
+
+
+<div class="about-main">
+    <div class="container">
+        <style>
+            .about-main {
+                background: white;
+                min-height: 100vh;
+                padding: 60px 0;
+            }
+            
+            .about-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                gap: 60px;
+            }
+            
+            .about-content {
+                flex: 1;
+                padding: 40px;
+            }
+            
+            .about-title {
+                font-size: 3rem;
+                font-weight: 700;
+                color: #8B4513;
+                margin-bottom: 20px;
+                font-family: serif;
+                line-height: 1.2;
+            }
+            
+            .about-description {
+                font-size: 1.1rem;
+                color: #333;
+                line-height: 1.7;
+                margin-bottom: 30px;
+                font-family: sans-serif;
+            }
+            
+            .about-features {
+                display: flex;
+                gap: 40px;
+                margin-top: 40px;
+            }
+            
+            .feature-item {
+                text-align: center;
+            }
+            
+            .feature-number {
+                font-size: 3rem;
+                font-weight: 700;
+                color: #8B4513;
+                margin-bottom: 10px;
+                font-family: serif;
+            }
+            
+            .feature-text {
+                font-size: 0.9rem;
+                color: #333;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-family: sans-serif;
+            }
+            
+            .about-image {
+                flex: 1;
+                text-align: center;
+            }
+            
+            .about-image img {
+                width: 100%;
+                max-width: 500px;
+                height: auto;
+                border-radius: 15px;
+                box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            }
+            
+            .contact-button {
+                background: #d4af37;
+                color: white;
+                padding: 15px 30px;
+                border: none;
+                border-radius: 5px;
+                font-size: 1rem;
+                font-weight: 600;
+                text-decoration: none;
+                display: inline-block;
+                margin-top: 30px;
+                transition: background 0.3s ease;
+            }
+            
+            .contact-button:hover {
+                background: #b8941f;
+                color: white;
+            }
+            
+            .about-full-width {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 40px;
+                text-align: center;
+            }
+            
+            .about-full-width .about-description {
+                font-size: 1.1rem;
+                color: #333;
+                line-height: 1.7;
+                margin-bottom: 40px;
+                font-family: sans-serif;
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .about-full-width .about-features {
+                justify-content: center;
+                margin-bottom: 40px;
+            }
+
+            /* Mission and Vision Section */
+            .mission_vision_section {
+                background: white;
+                padding: 80px 60px;
+                margin-bottom: 40px;
+            }
+
+            .mission_vision_container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .mission_section, .vision_section {
+                text-align: center;
+                padding: 40px;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            }
+
+            .mission_section {
+                background: linear-gradient(135deg, #FFD700, #FFA500);
+            }
+
+            .vision_section {
+                background: linear-gradient(135deg, #FFA500, #FFD700);
+            }
+
+            .mission_header h3, .vision_header h3 {
+                font-size: 2rem;
+                font-weight: bold;
+                color: #000;
+                margin-bottom: 20px;
+                font-family: "montserratB", Arial, sans-serif;
+                text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
+            }
+
+            .mission_content p, .vision_content p {
+                font-size: 1.1rem;
+                color: #000;
+                line-height: 1.6;
+                font-family: "montserratB", Arial, sans-serif;
+                text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
+            }
+
+            /* Core Values Section - Simple like About Us Header */
+            .core_values_section {
+                background: white;
+                padding: 80px 60px;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+
+            .core_values_header {
+                text-align: center;
+                margin-bottom: 60px;
+            }
+
+            .core_values_header h2 {
+                font-size: 2.5rem;
+                font-weight: bold;
+                color: #000;
+                font-family: "montserratB", Arial, sans-serif;
+                margin: 0;
+            }
+
+            .core_values_grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 40px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            /* Center the last two cards in the second row */
+            .core_values_grid .value_card:nth-child(4) {
+                grid-column: 1 / 2;
+                justify-self: end;
+            }
+
+            .core_values_grid .value_card:nth-child(5) {
+                grid-column: 2 / 3;
+                justify-self: start;
+            }
+
+            .value_card {
+                text-align: center;
+                padding: 40px 30px;
+                border: 2px solid #e0e0e0;
+                border-radius: 15px;
+                background: white;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .value_card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+                transition: left 0.5s ease;
+            }
+
+            .value_card:hover {
+                border-color: #FFD700;
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            }
+
+            .value_card:hover::before {
+                left: 100%;
+            }
+
+            .value_icon {
+                width: 70px;
+                height: 70px;
+                background: linear-gradient(135deg, #FFD700, #FFA500);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 25px auto;
+                box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+                position: relative;
+                transition: all 0.3s ease;
+            }
+
+            .value_icon::before {
+                content: '';
+                position: absolute;
+                top: -5px;
+                left: -5px;
+                right: -5px;
+                bottom: -5px;
+                background: linear-gradient(135deg, #FFD700, #FFA500);
+                border-radius: 50%;
+                opacity: 0.3;
+                z-index: -1;
+                transition: all 0.3s ease;
+            }
+
+            .value_card:hover .value_icon {
+                transform: scale(1.1) rotate(5deg);
+                box-shadow: 0 12px 25px rgba(255, 215, 0, 0.4);
+            }
+
+            .value_card:hover .value_icon::before {
+                opacity: 0.6;
+                transform: scale(1.2);
+            }
+
+            .value_icon span {
+                font-size: 2rem;
+                color: #000;
+                font-weight: bold;
+                transition: all 0.3s ease;
+            }
+
+            .value_card h3 {
+                font-size: 1.4rem;
+                font-weight: bold;
+                margin: 0 0 15px 0;
+                font-family: "montserratB", Arial, sans-serif;
+                color: #000;
+                position: relative;
+                transition: all 0.3s ease;
+            }
+
+            .value_card h3::after {
+                content: '';
+                position: absolute;
+                bottom: -8px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 30px;
+                height: 3px;
+                background: linear-gradient(90deg, #FFD700, #FFA500);
+                border-radius: 2px;
+                transition: all 0.3s ease;
+            }
+
+            .value_card:hover h3 {
+                color: #FFD700;
+                transform: translateY(-2px);
+            }
+
+            .value_card:hover h3::after {
+                width: 50px;
+                background: linear-gradient(90deg, #FFA500, #FFD700);
+            }
+
+            .value_card p {
+                font-size: 1rem;
+                line-height: 1.6;
+                margin: 0;
+                font-family: "montserratB", Arial, sans-serif;
+                color: #555;
+                transition: all 0.3s ease;
+            }
+
+            .value_card:hover p {
+                color: #333;
+                transform: translateY(-2px);
+            }
+
+            .read_more_btn {
+                display: inline-block;
+                background: #0056a6;
+                color: white;
+                padding: 12px 30px;
+                text-decoration: none;
+                border-radius: 5px;
+                margin-top: 20px;
+                transition: background 0.3s ease;
+            }
+
+            .read_more_btn:hover {
+                background: #003d7a;
+                color: white;
+                text-decoration: none;
+            }
+
+            .company_image_section {
+                width: 100%;
+                margin: 40px 0;
+                text-align: center;
+                background: white;
+            }
+
+            .company_image_section img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+            }
+
+            /* Why Choose Us Section */
+            .why_us_section {
+                background: white;
+                padding: 80px 60px;
+                margin-bottom: 40px;
+            }
+
+            .why_us_container {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .why_us_header {
+                text-align: center;
+                margin-bottom: 60px;
+            }
+
+            .why_us_title {
+                font-size: 2.5rem;
+                font-weight: bold;
+                color: #000;
+                font-family: "montserratB", Arial, sans-serif;
+                margin: 0;
+            }
+
+            .why_us_grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 30px;
+            }
+
+            .why_us_card {
+                text-align: center;
+                padding: 40px 20px;
+                background: white;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                transition: all 0.3s ease;
+                border: 2px solid #f0f0f0;
+            }
+
+            .why_us_card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+                border-color: #d4af37;
+            }
+
+            .why_us_icon {
+                width: 80px;
+                height: 80px;
+                background: linear-gradient(135deg, #d4af37, #b8941f);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 25px auto;
+                transition: all 0.3s ease;
+            }
+
+            .why_us_card:hover .why_us_icon {
+                transform: scale(1.1) rotate(5deg);
+            }
+
+            .why_us_icon i {
+                font-size: 2rem;
+                color: white;
+            }
+
+            .why_us_card_title {
+                font-size: 1.3rem;
+                font-weight: bold;
+                color: #333;
+                margin-bottom: 15px;
+                font-family: "montserratB", Arial, sans-serif;
+            }
+
+            .why_us_card_description {
+                font-size: 1rem;
+                color: #666;
+                line-height: 1.6;
+                margin: 0;
+                font-family: "montserratB", Arial, sans-serif;
+            }
+
+            .two_column_images {
+                display: flex;
+                gap: 20px;
+                margin: 40px 0;
+                background: white;
+            }
+
+            .two_column_images .company_image_section {
+                flex: 1;
+                margin: 0;
+            }
+
+            .two_column_images .company_image_section img {
+                width: 100%;
+                height: auto;
+            }
+
+            @media (max-width: 768px) {
+                .about-container {
+                    flex-direction: column;
+                    text-align: center;
+                    gap: 30px;
+                }
+                
+                .about-content {
+                    padding: 20px;
+                }
+                
+                .about-title {
+                    font-size: 2.5rem;
+                    text-align: center;
+                }
+                
+                .about-description {
+                    text-align: center;
+                    font-size: 1.2rem;
+                    line-height: 1.6;
+                }
+                
+                .about-image {
+                    order: -1;
+                }
+                
+                .about-image img {
+                    max-width: 100%;
+                    width: 100%;
+                    height: auto;
+                    border-radius: 15px;
+                    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+                }
+                
+                .about-full-width {
+                    padding: 20px;
+                    text-align: center;
+                }
+                
+                .about-full-width .about-description {
+                    text-align: center;
+                    font-size: 1.2rem;
+                    line-height: 1.6;
+                }
+                
+                .about-features {
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+                
+                .contact-button {
+                    display: block;
+                    margin: 20px auto;
+                    text-align: center;
+                }
+                
+                .about_header_section {
+                    padding: 60px 30px;
+                }
+                
+                .about_main_title {
+                    font-size: 2.5rem;
+                }
+
+                .about_main_description {
+                    font-size: 1.1rem;
+                }
+
+                .services_section {
+                    padding: 60px 30px;
+                }
+
+                .services_header h2 {
+                    font-size: 2rem;
+                }
+
+                .services_container {
+                    flex-direction: column;
+                    gap: 40px;
+                }
+
+                .services_content {
+                    gap: 15px;
+                }
+
+                .service_item {
+                    padding: 15px 20px;
+                }
+
+                .mission_vision_section {
+                    padding: 60px 30px;
+                }
+
+                .mission_vision_container {
+                    grid-template-columns: 1fr;
+                    gap: 30px;
+                }
+
+                .mission_section, .vision_section {
+                    padding: 30px 20px;
+                }
+
+                .mission_header h3, .vision_header h3 {
+                    font-size: 1.5rem;
+                }
+
+                .mission_content p, .vision_content p {
+                    font-size: 1rem;
+                }
+
+                .core_values_section {
+                    padding: 60px 30px;
+                }
+                
+                .core_values_header h2 {
+                    font-size: 2rem;
+                }
+
+                .core_values_grid {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 25px;
+                    max-width: 400px;
+                    margin: 0 auto;
+                    align-items: center;
+                }
+
+                .value_card {
+                    padding: 25px 20px;
+                    margin: 0;
+                    max-width: 350px;
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+
+                .value_card h3 {
+                    font-size: 1.4rem;
+                    margin: 0 0 15px 0;
+                }
+
+                .value_card p {
+                    font-size: 1rem;
+                    line-height: 1.5;
+                }
+                
+                .value_icon {
+                    width: 60px;
+                    height: 60px;
+                    margin: 0 auto 20px auto;
+                }
+                
+                .value_icon span {
+                    font-size: 1.8rem;
+                }
+
+                .company_image_section {
+                    margin: 30px 0;
+                }
+
+                .two_column_images {
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
+                .why_us_section {
+                    padding: 60px 30px;
+                }
+                
+                .why_us_title {
+                    font-size: 2rem;
+                }
+
+                .why_us_grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 20px;
+                }
+
+                .why_us_card {
+                    padding: 30px 15px;
+                }
+
+                .why_us_icon {
+                    width: 60px;
+                    height: 60px;
+                    margin: 0 auto 20px auto;
+                }
+
+                .why_us_icon i {
+                    font-size: 1.5rem;
+                }
+
+                .why_us_card_title {
+                    font-size: 1.1rem;
+                    margin-bottom: 10px;
+                }
+
+                .why_us_card_description {
+                    font-size: 0.9rem;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .why_us_grid {
+                    grid-template-columns: 1fr;
+                    gap: 15px;
+                }
+            }
+        </style>
+
+        <div class="about-container">
+            <div class="about-content">
+                <h1 class="about-title">Welcome to Jabe Investment</h1>
+                <p class="about-description">
+                    JABE INVESTMENT is a leading professional manufacturer and supplier of mining machinery spare parts, 
+                    specializing in high-quality components for heavy mining equipment operations. Our product range 
+                    includes bucket pins & bushings, track chains, rollers, bolts and nuts, and other precision components.
+                </p>
+                <p class="about-description">
+                    Located in the heart of the industrial sector, we provide comprehensive solutions for all your 
+                    construction and machinery needs. Our team of experts ensures that every project is completed 
+                    with precision and efficiency.
+                </p>
+            </div>
+            
+            <div class="about-image">
+                <img src="{% static 'uploadfile/userimg/jabe1.png' %}" alt="Jabe Investment" />
+            </div>
+        </div>
+        
+        <div class="about-full-width">
+            <p class="about-description">
+                "Quality & Service" is our core principle. We pride ourselves on delivering exceptional service, 
+                competitive pricing, and reliable support. Whether you're looking for heavy machinery, spare parts, 
+                or technical consultation, we're here to help your business grow.
+            </p>
+            
+            <div class="about-features">
+                <div class="feature-item">
+                    <div class="feature-number">15+</div>
+                    <div class="feature-text">Years Experience</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-number">24/7</div>
+                    <div class="feature-text">Customer Support</div>
+                </div>
+            </div>
+            
+            <a href="{% url 'contact-us' %}" class="contact-button">Contact Us Today</a>
+        </div>
+
+        <!-- Mission and Vision Section -->
+        <div class="mission_vision_section">
+            <div class="mission_vision_container">
+                <div class="mission_section">
+                    <div class="mission_header">
+                        <h3>Mission</h3>
+                    </div>
+                    <div class="mission_content">
+                        <p>To become the most reliable and innovative spare parts supplier in Africa, known for world-class quality and exceptional services.</p>
+                    </div>
+                </div>
+                
+                <div class="vision_section">
+                    <div class="vision_header">
+                        <h3>Vision</h3>
+                    </div>
+                    <div class="vision_content">
+                        <p>To deliver durable, high-performance machine parts that boost efficiency, uptime, and reliability for our clients.</p>
+                    </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Company Image Section -->
+        <div class="company_image_section">
+            <img src="{% static 'uploadfile/userimg/cat1.png' %}" alt="JABE Investment" />
+        </div>
+
+        <!-- Why Choose Us Section -->
+        <div class="why_us_section">
+            <div class="why_us_container">
+                <div class="why_us_header">
+                    <h2 class="why_us_title">Why Choose Us?</h2>
+                </div>
+                
+                <div class="why_us_grid">
+                    <div class="why_us_card">
+                        <div class="why_us_icon">
+                            <i class="fa fa-shield"></i>
+                        </div>
+                        <h3 class="why_us_card_title">Quality Guaranteed</h3>
+                        <p class="why_us_card_description">
+                            All our spare parts are strong, genuine, and long-lasting
+                        </p>
+                    </div>
+                    
+                    <div class="why_us_card">
+                        <div class="why_us_icon">
+                            <i class="fa fa-warehouse" style="font-size: 45px;"></i>
+                        </div>
+                        <h3 class="why_us_card_title">Wide Range in Stock</h3>
+                        <p class="why_us_card_description">
+                            We always have parts ready for excavators, dozers, and graders.
+                        </p>
+                    </div>
+                    
+                    <div class="why_us_card">
+                        <div class="why_us_icon">
+                            <i class="fa fa-dollar-sign" style="font-size: 45px;"></i>
+                        </div>
+                        <h3 class="why_us_card_title">Competitive Prices</h3>
+                        <p class="why_us_card_description">
+                            Best prices with no compromise on quality.
+                        </p>
+                    </div>
+                    
+                    <div class="why_us_card">
+                        <div class="why_us_icon">
+                            <i class="fa-solid fa-tools" style="font-size: 45px;"></i>
+                        </div>
+                        <h3 class="why_us_card_title">Reliable Support</h3>
+                        <p class="why_us_card_description">
+                            We provide reliable support for your heavy equipment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Core Values Section -->
+        <div class="core_values_section">
+            <div class="core_values_header">
+                <h2>Our Core Values</h2>
+            </div>
+            <div class="core_values_grid">
+                <div class="value_card black_card">
+                    <div class="value_icon">
+                        <span class="icon_checkmark">✓</span>
+                    </div>
+                    <h3>QUALITY</h3>
+                    <p>Only the best parts makes it to our shelves.</p>
+                </div>
+                
+                <div class="value_card black_card">
+                    <div class="value_icon">
+                        <span class="icon_lightbulb">💡</span>
+                    </div>
+                    <h3>INNOVATION</h3>
+                    <p>We deal with honesty and transparency</p>
+                </div>
+                
+                <div class="value_card yellow_card">
+                    <div class="value_icon">
+                        <span class="icon_shield">🛡️</span>
+                    </div>
+                    <h3>INTEGRITY</h3>
+                    <p>Only the best parts makes it to our shelves.</p>
+                </div>
+                
+                <div class="value_card yellow_card">
+                    <div class="value_icon">
+                        <span class="icon_handshake">🤝</span>
+                    </div>
+                    <h3>RELIABILITY</h3>
+                    <p>We deliver, always on time.</p>
+                </div>
+                
+                <div class="value_card black_card">
+                    <div class="value_icon">
+                        <span class="icon_team">👥</span>
+                    </div>
+                    <h3>EXCELLENCE</h3>
+                    <p>Every solution is tailored to you.</p>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div>
+{% endblock %}
