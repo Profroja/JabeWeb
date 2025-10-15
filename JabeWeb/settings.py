@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',') + ['c27e1abc1c40.ngrok-free.app', '*.ngrok-free.app', '*.ngrok.io', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',') + ['localhost', '127.0.0.1', 'jabeinvestment.co.tz']
 
 AUTH_USER_MODEL = 'auths.User'
 
