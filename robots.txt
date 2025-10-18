@@ -1,6 +1,11 @@
 User-agent: *
 Allow: /
 
+# Allow favicon and static files for better indexing
+Allow: /static/uploadfile/userimg/*.ico
+Allow: /static/uploadfile/userimg/*.png
+Allow: /static/site.webmanifest
+
 # Sitemap
 Sitemap: https://jabeinvestment.co.tz/sitemap.xml
 
